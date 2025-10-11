@@ -390,24 +390,6 @@
         document.documentElement.scrollTop = 0;
       });
       
-      // Contact form submission
-      document.getElementById('submitContact').addEventListener('click', function() {
-        const name = document.getElementById('nameInput').value;
-        const email = document.getElementById('emailInput').value;
-        const phone = document.getElementById('phoneInput').value;
-        const message = document.getElementById('messageInput').value;
-        
-        if (name && email && message) {
-          alert('Thank you for your message! We will get back to you soon.');
-          document.getElementById('nameInput').value = '';
-          document.getElementById('emailInput').value = '';
-          document.getElementById('phoneInput').value = '';
-          document.getElementById('messageInput').value = '';
-        } else {
-          alert('Please fill in all required fields (Name, Email, and Message).');
-        }
-      });
-      
       // Initialize circular progress animations
       function animateProgress() {
         const progressElements = document.querySelectorAll('.circular-progress');
