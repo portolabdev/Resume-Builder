@@ -11,7 +11,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <!-- custom css file -->
+    <!--css file -->
    <link rel="stylesheet" href="port.css"/>
 
     <!-- google font link -->
@@ -22,23 +22,23 @@
       rel="stylesheet"
     />
 
-    <!-- bootstrap icon cdn link  -->
+    <!-- bootstrap iconlink  -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
+    /> 
 
     <!-- for adding animation to website we have use AOS library 
     AOS Library css file cdn link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- jquery cdn link  -->
+    <!-- jquery link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     
-    <!-- Font Awesome for AI Resume Builder -->
+    <!-- Font Resume Builder -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- jsPDF library for PDF generation -->
+    <!--PDF generation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
@@ -92,7 +92,6 @@
     <section class="home pt-5 pb-5" id="home">
       <div class="container">
         <div class="row justify-content-evenly align-items-center">
-          <!-- here data-aos is used for adding aos animation  -->
           <div class="col-12 col-md-6 text-center text-md-start" data-aos="slide-right">
             <h2 style="color: #3b3378">
               Hello! We are <br /><span class="c-orange">THE ETERNALS</span>
@@ -110,7 +109,8 @@
         </div>
       </div>
     </section>
-    <!-- home section ends here -->
+    <!-- home section ends-->
+
     <!-- skill section starts -->
     <section class="skill mt-5 py-5" id="about">
       <div class="container">
@@ -169,7 +169,8 @@
         </div>
       </div>
     </section>
-    <!-- skill section end here -->
+    <!-- skill section end-->
+
     <!-- Team Section -->
     <section class="team py-5" id="team">
       <div class="container">
@@ -182,7 +183,7 @@
             <div class="team-member">
               <img src="images/ishan.jpg" class="team-photo" alt="Team Member">
               <h4>Ishan</h4>
-              <p class="text-muted">Deployer</p>
+              <p class="text-muted"></p>
               <div class="social-links">
                 <button><i class="bi bi-linkedin" href="#"></i></button>
                 <button><i class="bi bi-github" href="#"></i></button>
@@ -194,7 +195,7 @@
             <div class="team-member">
               <img src="images/CR.jpg"class="team-photo" alt="Team Member">
               <h4> Prakhar</h4>
-              <p class="text-muted">Resume Builder</p>
+              <p class="text-muted"></p>
               <div class="social-links">
                 <button><i class="bi bi-linkedin" href="https://www.linkedin.com/in/prakhar-pratap-kaushik-781b47377"></i></button>
                 <button><i class="bi bi-github"  href="#"></i></button>
@@ -206,7 +207,7 @@
             <div class="team-member">
               <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="team-photo" alt="Team Member">
               <h4>Priyam Singh</h4>
-              <p class="text-muted">Frontend Developer</p>
+              <p class="text-muted"></p>
               <div class="social-links">
                 <button><i class="bi bi-linkedin" href="#"></i></button>
                 <button><i class="bi bi-github" href="#"></i></button>
@@ -218,7 +219,7 @@
             <div class="team-member">
               <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="team-photo" alt="Team Member">
               <h4>Rajeev Tiwari</h4>
-              <p class="text-muted">Backend</p>
+              <p class="text-muted"></p>
               <div class="social-links">
                 <button><i class="bi bi-linkedin"></i></button>
                 <button><i class="bi bi-github"></i></button>
@@ -230,7 +231,7 @@
       </div>
     </section>
 
-    <!-- AI Resume Builder Modal -->
+    <!-- Resume Builder -->
     <div id="resume-builder-modal" class="resume-builder-modal">
       <div class="resume-builder-content">
         <span class="close-resume-builder">&times;</span>
@@ -238,7 +239,7 @@
         <header>
           <h1>AI Resume Builder</h1>
           <p class="subtitle">Create a professional resume in minutes with AI-powered suggestions</p>
-          <span class="ai-badge"><i class="fas fa-robot"></i> Powered by AI</span>
+          <span class="ai-badge"><i class="fas fa-robot"></i> Powered by Deepseek</span>
         </header>
 
         <div class="main-content">
@@ -270,15 +271,14 @@
               
               <div class="form-group">
                 <label for="phone">Phone</label>
-                <input type="text" id="phone" placeholder="+91-91191-19119">
-              </div>
-              
+                 <input type="tel" id="phone" placeholder="+91-91191-19119" maxlength="10" pattern="\d{10}"
+                  oninput="this.value=this.value.replace(/\D/g,'')">
+                  </div>
               <div class="form-group">
                 <label for="location">Location</label>
                 <input type="text" id="location" placeholder="Motihari">
               </div>
-              
-              <div class="form-group">
+                <div class="form-group">
                 <label for="summary">Professional Summary</label>
                 <textarea id="summary" placeholder="Experienced software engineer with 5+ years in web development..."></textarea>
               </div>
@@ -303,12 +303,12 @@
               
               <div class="form-group">
                 <label for="startDate">Start Date</label>
-                <input type="month" id="startDate">
+                <input type="date" id="startDate">
               </div>
               
               <div class="form-group">
                 <label for="endDate">End Date</label>
-                <input type="month" id="endDate">
+                <input type="date" id="endDate">
               </div>
               
               <div class="form-group">
@@ -345,7 +345,7 @@
               
               <div class="form-group">
                 <label for="gradYear">Graduation Year</label>
-                <input type="month" id="gradYear">
+                <input type="year" id="gradYear" maxlength="4">
               </div>
               
               <div class="form-group">
@@ -373,9 +373,7 @@
               </button>
               
               <div class="skills-list" id="skillsContainer">
-                <!-- Skills will be added here dynamically -->
               </div>
-              
               <div class="ai-suggestions">
                 <div class="suggestion-title">
                   <i class="fas fa-lightbulb"></i> AI Suggestion
@@ -384,21 +382,22 @@
               </div>
             </div>
 
-            <div class="action-buttons">
-              <button class="btn btn-ai" id="ai-review">
-                <i class="fas fa-robot"></i> AI Resume Review
-              </button>
-              <button class="btn" id="downloadPdf">
-                <i class="fas fa-download"></i> Download PDF
-              </button>
-              <button class="btn" id="resetForm">
-                <i class="fas fa-redo"></i> Reset Form
-              </button>
-               <button class="btn" id="template-selector">
-                 <i class="fas fa-palette"></i> Choose Template
-                 </button>
-            </div>
-          </div>
+               <div class="action-buttons">
+                <button class="btn btn-ai" id="ai-review">
+               <i class="fas fa-robot"></i> AI Resume Review
+                  </button>
+                  <button class="btn" id="downloadPdf">
+                   <i class="fas fa-download"></i> Download PDF
+                   </button>
+                 <button class="btn" id="resetForm">
+                   <i class="fas fa-redo"></i> Reset Form
+                        </button>
+                     <button class="btn" id="template-selector">
+                   <i class="fas fa-palette"></i> Choose Template
+                  </button>
+                   </div>
+
+                    </div>
 <!-- Add this template selector modal after the resume builder modal -->
 <div id="template-modal" class="resume-builder-modal" style="display: none;">
   <div class="resume-builder-content" style="max-width: 1000px;">
@@ -410,71 +409,84 @@
     </header>
 
     <div class="row mt-4">
-      <!-- Template 1: Modern Professional -->
-      <div class="col-md-4 mb-4">
-        <div class="template-card" data-template="modern">
-          <div class="template-preview modern-template">
-            <div class="template-header" style="background: #2c3e50; color: white; padding: 20px;">
-              <h4 style="margin: 0; font-size: 22px;">JOHN DOE</h4>
-              <p style="margin: 5px 0; font-size: 14px;">Software Engineer</p>
-            </div>
-            <div class="template-body" style="padding: 15px; background: white;">
-              <div class="section" style="margin-bottom: 15px;">
-                <h5 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px;">EXPERIENCE</h5>
-                <p style="font-size: 12px; margin: 5px 0;">Senior Developer at Tech Company</p>
-              </div>
-            </div>
-          </div>
-          <div class="template-info text-center mt-2">
-            <h6>Modern Professional</h6>
-            <small class="text-muted">Clean & ATS-Friendly</small>
-          </div>
-        </div>
+     <!-- Template 1: -->
+<div class="col-md-4 mb-4">
+  <div class="template-card" data-template="modern">
+    <div class="template-preview modern-template">
+      <div class="template-header" style="background: #afc2d5; color: white; padding: 20px; position: relative;">
+        <h4 style="margin: 0; font-size: 22px;">JOHN DOE</h4>
+        <p style="margin: 5px 0; font-size: 14px;">Software Engineer</p>
       </div>
 
-      <!-- Template 2: Executive Classic -->
-      <div class="col-md-4 mb-4">
-        <div class="template-card" data-template="executive">
-          <div class="template-preview executive-template">
-            <div class="template-header" style="background: #34495e; color: white; padding: 20px; border-left: 5px solid #e74c3c;">
-              <h4 style="margin: 0; font-size: 22px;">JOHN DOE</h4>
-              <p style="margin: 5px 0; font-size: 14px;">Senior Manager</p>
-            </div>
-            <div class="template-body" style="padding: 15px; background: #ecf0f1;">
-              <div class="section" style="margin-bottom: 15px;">
-                <h5 style="color: #2c3e50;">PROFESSIONAL EXPERIENCE</h5>
-                <p style="font-size: 12px; margin: 5px 0;">Company Name - Position</p>
-              </div>
-            </div>
-          </div>
-          <div class="template-info text-center mt-2">
-            <h6>Executive Classic</h6>
-            <small class="text-muted">Corporate & Formal</small>
-          </div>
+      <div class="template-body" style="padding: 15px; background: white;">
+        <div class="section" style="margin-bottom: 15px;">
+          <h5 style="color: #869aaf; border-bottom: 2px solid #aabecc; padding-bottom: 5px;">EXPERIENCE</h5>
+          <p style="font-size: 12px; margin: 5px 0;">Senior Developer at Tech Company</p>
         </div>
+      </div>
+    </div>
+
+    <div class="template-info text-center mt-2">
+      <h6>Modern Professional</h6>
+      <small class="text-muted">Clean & ATS-Friendly</small>
+    </div>
+  </div>
+</div>
+
+
+     <!-- Template 2: -->
+<div class="col-md-4 mb-4">
+  <div class="template-card" data-template="executive">
+    <div class="template-preview executive-template">
+      <div class="template-header" style="background: #bad1e7; color: white; padding: 20px; border-left: 5px solid #e74c3c; position: relative;">
+
+        <h4 style="margin: 0; font-size: 22px;">JOHN DOE</h4>
+        <p style="margin: 5px 0; font-size: 14px;">Senior Manager</p>
       </div>
 
-      <!-- Template 3: Minimalist -->
-      <div class="col-md-4 mb-4">
-        <div class="template-card" data-template="minimalist">
-          <div class="template-preview minimalist-template">
-            <div class="template-header" style="padding: 20px; border-bottom: 3px solid #27ae60;">
-              <h4 style="margin: 0; color: #2c3e50; font-size: 22px;">JOHN DOE</h4>
-              <p style="margin: 5px 0; color: #7f8c8d; font-size: 14px;">Full Stack Developer</p>
-            </div>
-            <div class="template-body" style="padding: 15px;">
-              <div class="section" style="margin-bottom: 15px;">
-                <h5 style="color: #27ae60; font-size: 14px;">WORK HISTORY</h5>
-                <p style="font-size: 12px; margin: 5px 0;">Role at Company</p>
-              </div>
-            </div>
-          </div>
-          <div class="template-info text-center mt-2">
-            <h6>Minimalist</h6>
-            <small class="text-muted">Simple & Clean</small>
-          </div>
+      <div class="template-body" style="padding: 15px; background: #ecf0f1;">
+        <div class="section" style="margin-bottom: 15px;">
+          <h5 style="color: #636f7c;">PROFESSIONAL EXPERIENCE</h5>
+          <p style="font-size: 12px; margin: 5px 0;">Company Name - Position</p>
         </div>
       </div>
+    </div>
+
+    <div class="template-info text-center mt-2">
+      <h6>Executive Classic</h6>
+      <small class="text-muted">Corporate & Formal</small>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Template 3: -->
+      <div class="col-md-4 mb-4">
+  <div class="template-card" data-template="minimalist">
+    <div class="template-preview minimalist-template">
+      <div class="template-header" style="padding: 20px; border-bottom: 3px solid #27ae60; position: relative;">
+
+        
+
+        <h4 style="margin: 0; color: #2c3e50; font-size: 22px;">JOHN DOE</h4>
+        <p style="margin: 5px 0; color: #7f8c8d; font-size: 14px;">Full Stack Developer</p>
+      </div>
+
+      <div class="template-body" style="padding: 15px;">
+        <div class="section" style="margin-bottom: 15px;">
+          <h5 style="color: #27ae60; font-size: 14px;">WORK HISTORY</h5>
+          <p style="font-size: 12px; margin: 5px 0;">Role at Company</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="template-info text-center mt-2">
+      <h6>Minimalist</h6>
+      <small class="text-muted">Simple & Clean</small>
+    </div>
+  </div>
+</div>
+
     </div>
 
     <div class="text-center mt-4">
@@ -483,41 +495,42 @@
   </div>
 </div>
           <div class="preview-section">
-            <h2 class="section-title"><i class="fas fa-eye"></i> Resume Preview</h2>
-            <div class="resume-preview" id="resumePreview">
-              <!-- Resume content will be generated here -->
-              <div class="resume-header">
-                <div class="resume-name">Your Name</div>
-                <div class="resume-title">Your Professional Title</div>
-                <div class="resume-contact">
-                  <span>email@example.com</span>
-                  <span>(123) 456-7890</span>
-                  <span>City, State</span>
-                </div>
-              </div>
-              
-              <div class="resume-section">
-                <div class="resume-section-title">Professional Summary</div>
-                <p>Your professional summary will appear here. Write a brief overview of your experience, skills, and career goals.</p>
-              </div>
-              
-              <div class="resume-section">
-                <div class="resume-section-title">Work Experience</div>
-                <p>Your work experience will be listed here.</p>
-              </div>
-              
-              <div class="resume-section">
-                <div class="resume-section-title">Education</div>
-                <p>Your education history will be listed here.</p>
-              </div>
-              
-              <div class="resume-section">
-                <div class="resume-section-title">Skills</div>
-                <p>Your skills will be listed here.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <h2 class="section-title"><i class="fas fa-eye"></i> Resume Preview</h2>
+  <div class="resume-preview" id="resumePreview">
+
+    <!-- Resume content will be generated here -->
+    <div class="resume-header" style="position: relative;">
+       <div class="resume-name">Your Name</div>
+      <div class="resume-title">Your Professional Title</div>
+      <div class="resume-contact">
+        <span>email@example.com</span>
+        <span>(123) 456-7890</span>
+        <span>City, State</span>
+      </div>
+    </div>
+    
+    <div class="resume-section">
+      <div class="resume-section-title">Professional Summary</div>
+      <p>Your professional summary will appear here. Write a brief overview of your experience, skills, and career goals.</p>
+    </div>
+    
+    <div class="resume-section">
+      <div class="resume-section-title">Work Experience</div>
+      <p>Your work experience will be listed here.</p>
+    </div>
+    
+    <div class="resume-section">
+      <div class="resume-section-title">Education</div>
+      <p>Your education history will be listed here.</p>
+    </div>
+    
+    <div class="resume-section">
+      <div class="resume-section-title">Skills</div>
+      <p>Your skills will be listed here.</p>
+       </div>
+       </div>
+      </div>
+       </div>
       </div>
     </div>
 
@@ -657,48 +670,12 @@
               </div>
               <div class="col-11">
                 <h5>Website</h5>
-                <p>www.theeternals.com</p>
+                <p>https://portolabdev.github.io/.main/</p>
               </div>
             </div>
           </div>
           <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
-            <div class="contact-form">
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nameInput"
-                  placeholder="Name"
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailInput"
-                  placeholder="E-mail"
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="phoneInput"
-                  placeholder="Mobile No."
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  id="messageInput"
-                  placeholder="Message"
-                  rows="5"
-                ></textarea>
-              </div>
-              <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" id="submitContact">
-                Submit
-              </button>
-            </div>
+             <img src="images/5124556.jpg" class="img-fluid rounded shadow" alt="contact Photo">
           </div>
         </div>
       </div>
@@ -709,25 +686,15 @@
     <button
       type="button"
       class="btn btn-floating btn-lg rounded-pill"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up"></i>
+      id="btn-back-to-top">
     </button>
 
-    <!-- footer section starts  -->
+    <!-- footer section starts  -->+
+     
     <footer class="text-center text-muted py-4">
       <div class="container">
         <h3 class="text-white pt-4" data-aos="fade-up">THE ETERNALS</h3>
         <h4 class="text-pink pt-4" data-aos="fade-up">Web Development Team</h4>
-        <div class="link-group mt-5" data-aos="fade-up">
-          <a href="#home">Home</a>
-          <div class="vr d-none d-md-inline"></div>
-          <a href="#about">About</a>
-          <div class="vr d-none d-md-inline"></div>
-          <a href="#team">Team</a>
-          <div class="vr d-none d-md-inline"></div>
-          <a href="#contact">Contact</a>
-        </div>
         <div class="social-links mt-5" data-aos="fade-up">
           <button class="rounded-pill">
             <i class="bi bi-linkedin"></i>
@@ -744,7 +711,7 @@
         </div>
         <hr class="text-muted my-4" />
 
-        <p>Copyright 2025 THE ETERNALS | All Rights Reserved.</p>
+        <p>Copyright 2023 THE ETERNALS | All Rights Reserved.</p>
       </div>
     </footer>
     <!-- footer section ends here -->
@@ -769,5 +736,4 @@
    <script src="port.js"></script>
    
   </body>
-
 </html>
