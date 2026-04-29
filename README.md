@@ -1,1 +1,1 @@
-This is the website we build as our. # .main
+This is the website we build as our website. # .main
