@@ -1,9 +1,8 @@
-const testimonials = [
+ const testimonials = [
     {
         id: 1,
         name: "Ashish Singh",
         company: "TechSolutions",
-        position: "CEO",
         feedback: "Working with THE ETERNALS was a fantastic experience. They delivered our website ahead of schedule and the quality exceeded our expectations. Highly recommended for any web development project.",
         rating: 5,
         image: "https://randomuser.me/api/portraits/men/32.jpg",
